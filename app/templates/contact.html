@@ -5,7 +5,7 @@
     <h2 class="title">Contact</h2>
 
     <form method="POST" action="{{ url_for('contact') }}">
-
+        {{ form.csrf_token }}
         <fieldset class="form-field">
             {{ form.name.label }}
             {{ form.name(size=20) }}
@@ -13,7 +13,7 @@
 
         <fieldset class="form-field">
             {{ form.email.label }}
-            {{ form.email }}
+            {{ form.email}}
         </fieldset>
         
         <fieldset class="form-field">
@@ -26,7 +26,8 @@
             {{ form.message }}
         </fieldset>
 
-          {{ form.submit }}
+        <button type="submit" class="submitted"> Send </button>
+          
 
     </form>
 </div>
