@@ -35,7 +35,7 @@ def contact():
         email = form.email.data
         subject = form.subject.data
         fmessage = form.message.data
-        msg = Message(subject, sender=(name,email),recipients=["437a8514cd-142af8@inbox.mailtrap.io"])
+        msg = Message(subject, sender=(name,email),recipients=["to@example.com"])
         flash('You have successfully filled out the form', 'success')
         msg.body = fmessage
         mail.send(msg)
